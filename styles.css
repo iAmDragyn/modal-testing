@@ -8,3 +8,11 @@
   .invalid input:required:valid {
     background: #17D654;
   }
+
+  .security-question-dropdown{
+    padding-bottom: 10px;
+  }
+
+  .small-text{
+      font-size: smaller;
+  }
