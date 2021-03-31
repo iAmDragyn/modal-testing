@@ -14,14 +14,66 @@
     <header>
     </header>
 
-    <!-- LOG IN MODAL BUTTON -->
-    <br>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
-        Log In Modal
-    </button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal">
-        Sign Up Modal
-    </button>
+    <nav class="navbar navbar-light navbar-expand-md justify-content-left" style="background-color: #ffffff;">
+
+        <a class="nav-link" href="#"> </a>
+
+        <a class="navbar-brand" href="/">
+            <img src="img/wink-svgrepo-com.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Let's Take a Selfie!
+        </a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Nav bar items -->
+            <ul class="nav navbar-nav ml-auto">
+                <!-- Search bar -->
+                <li class="nav-item">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <!-- Please keep this version of the button just in case -->
+                        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                        <a href="/search" class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search
+                        </a>
+                    </form>
+                </li>
+
+                <!-- LOG IN MODAL BUTTON -->
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                        data-target="#loginModal">Log In</button>
+                </li>
+
+                <!-- SIGN UP MODAL BUTTON -->
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal">Sign
+                        Up</button>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <button type="button" class="btn btn-outline-line dropdown-toggle dropdown-toggle-split"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/Blank_face.svg" width="30" height="30" class="d-inline-block align-top"
+                            alt="">
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="/account">Account</a>
+                        <a class="dropdown-item" href="/settings">Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Sign Out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- LOG IN MODAL -->
     <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -92,6 +144,7 @@
             </div>
         </div>
     </div>
+
     <!-- SIGN UP MODAL -->
     <div class="modal" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -173,7 +226,6 @@
 
                         <!-- NEEDS 3 SECURITY QUESTIONS HERE-->
                         Security Questions <br>
-
                         <fieldset class="borderless">
                             <div class="security-question-dropdown" id="security1">
                                 <select class="form-control" onchange="updateSecurityQuestion1View()" required>
@@ -244,7 +296,6 @@
             </div>
         </div>
     </div>
-
 
     <footer>
     </footer>
