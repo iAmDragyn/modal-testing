@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        
+
     </header>
 
     <!-- NAVBAR -->
@@ -26,7 +26,7 @@
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
             aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"> </span>
         </button>
 
         <!-- Collapsible content -->
@@ -99,7 +99,7 @@
 
                         <!-- Email -->
                         <div class="form-group">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" required>
                             <div class="invalid-feedback small-text">
                                 Please enter a valid email address.
                             </div>
@@ -113,7 +113,7 @@
 
                         <!-- Password -->
                         <div class="form-group">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password"
+                            <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password"
                                 required>
                             <div class="invalid-feedback small-text">
                                 Please enter a password.
@@ -171,19 +171,19 @@
                         <!-- ROW 1 FIRST/LAST/DoB -->
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="First name" required>
+                                <input type="text" name="firstName" class="form-control" placeholder="First name" required>
                                 <div class="invalid-feedback small-text">
                                     Please enter a first name.
                                 </div>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name" required>
+                                <input type="text" name="lastName" class="form-control" placeholder="Last name" required>
                                 <div class="invalid-feedback small-text">
                                     Please enter a last name.
                                 </div>
                             </div>
                             <div class="col" id="date-div">
-                                <input type="date" id="dob" class="form-control" required>
+                                <input type="date" name="dateOfBirth" id="dob" class="form-control" required>
                                 <div class="invalid-feedback small-text">
                                     Please enter a valid date.
                                 </div>
@@ -193,13 +193,13 @@
                         <!-- ROW 2 USERNAME/EMAIL-->
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Username" required>
+                                <input type="text" name="username" class="form-control" placeholder="Username" required>
                                 <div class="invalid-feedback small-text">
                                     Please enter your username.
                                 </div>
                             </div>
                             <div class="col">
-                                <input type="email" class="form-control" placeholder="Email" required>
+                                <input type="email" name="email" class="form-control" placeholder="Email" required>
                                 <div class="invalid-feedback small-text">
                                     Please enter a valid email.
                                 </div>
@@ -209,7 +209,7 @@
                         <!-- ROW 3 PASSWORDS -->
                         <div class="row" id="passwordDiv">
                             <div class="col">
-                                <input type="password" id="password-sign-up" class="form-control" placeholder="Password"
+                                <input type="password" name="password" id="password-sign-up" class="form-control" placeholder="Password"
                                     required>
                                 <div class="invalid-feedback small-text">
                                     Please enter your password.
@@ -228,7 +228,7 @@
                         Security Questions <br>
                         <fieldset class="borderless">
                             <div class="security-question-dropdown" id="security1">
-                                <select class="form-control" onchange="updateSecurityQuestion1View()" required>
+                                <select class="form-control" name="securityQuestion1" onchange="updateSecurityQuestion1View()" required>
                                     <option selected disabled value=""> Question 1 </option>
                                     <option value="1">What was your childhood nickname?</option>
                                     <option value="2">What is your oldest cousin's first and last name?</option>
@@ -239,7 +239,7 @@
                                     </option>
                                 </select>
                             </div>
-                            <input type="text" class="form-control" placeholder="Answer" required>
+                            <input type="text" name="securityAnswer1" class="form-control" placeholder="Answer" required>
                             <div class="invalid-feedback small-text">
                                 Please choose and answer this security question.
                             </div>
@@ -247,7 +247,7 @@
 
                         <fieldset class="borderless">
                             <div class="security-question-dropdown" id="security2">
-                                <select class="form-control" onchange="updateSecurityQuestion2View()" required>
+                                <select class="form-control" name="securityQuestion2" onchange="updateSecurityQuestion2View()" required>
                                     <option selected disabled value=""> Question 2 </option>
                                     <option value="1">What was your childhood nickname?</option>
                                     <option value="2">What is your oldest cousin's first and last name?</option>
@@ -258,7 +258,7 @@
                                     </option>
                                 </select>
                             </div>
-                            <input type="text" class="form-control" placeholder="Answer" required>
+                            <input type="text" name="securityAnswer2" class="form-control" placeholder="Answer" required>
                             <div class="invalid-feedback small-text">
                                 Please choose and answer this security question.
                             </div>
@@ -266,7 +266,7 @@
 
                         <fieldset class="borderless">
                             <div class="security-question-dropdown" id="security3">
-                                <select class="form-control" onchange="updateSecurityQuestion3View()" required>
+                                <select class="form-control" name="securityQuestion3" onchange="updateSecurityQuestion3View()" required>
                                     <option selected disabled value=""> Question 3 </option>
                                     <option value="1">What was your childhood nickname?</option>
                                     <option value="2">What is your oldest cousin's first and last name?</option>
@@ -277,7 +277,7 @@
                                     </option>
                                 </select>
                             </div>
-                            <input type="text" class="form-control" placeholder="Answer" required>
+                            <input type="text" name="securityAnswer3" class="form-control" placeholder="Answer" required>
                             <div class="invalid-feedback small-text">
                                 Please choose and answer this security question.
                             </div>
@@ -299,8 +299,9 @@
 
     <%- body %>
 
-        <footer>
-        </footer>
+    <footer>
+
+    </footer>
 
         <!-- Bootystrap things -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
