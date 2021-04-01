@@ -1,36 +1,32 @@
 const User = require("../models/user");
 
-// function that retreives all user
-exports.getAllUsers = (req, res) => {
-    User.find({})
-        .exec()
-        .then(users => {
-            res.render("users", {users: users})
-        })
-        .catch((error) => {
-            console.log(error);
-            return [];
-        })
-        .then(() => {
-            console.log("promise complete");
-        })
-};
+exports.postedSignUpForm = (req, res) => {
+    res.render("index")
+}
 
-// function provides sign up page for users
-exports.getUserPage = (req, res) => {
-    res.render("sign-up");
-};
+exports.postedLogInForm = (req, res) => {
+    res.render("index")
+}
 
 // retrives the posted data from the req body and saves a new user
 exports.saveUser = (req, res) => {
     let newUser = new User({
-        name: req.body.name,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        dateOfBirth: req.body.dateOfBirth,
+        username: req.body.username,
         email: req.body.email,
-        zipCode: req.body.zipCode
+        password: req.body.password,
+        securityQuestion1: req.body.securityQuestion1,
+        securityAnswer1: req.body.securityAnswer1,
+        securityQuestion2: req.body.securityQuestion2,
+        securityAnswer2: req.body.securityAnswer2,
+        securityQuestion3: req.body.securityQuestion3,
+        securityAnswer3: req.body.securityAnswer3
     })
     newUser.save()
         .then(() => {
-            res.render("thanks");
+            res.render("thanks"); // make a modal to let them know they're signed up?
         })
         .catch(error => {
             res.send(error);
