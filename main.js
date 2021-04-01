@@ -19,7 +19,6 @@ app.use(express.urlencoded({extended: false}));
 
 app.use(express.json());
 
-app.get("/thing", homeController.showThing);
 app.post("/signUp", homeController.postedSignUpForm);
 app.post("/logIn", homeController.postedLogInForm);
 
