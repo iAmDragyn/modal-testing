@@ -1,25 +1,12 @@
 const User = require("../models/user");
 
-// function that retreives all user
-exports.getAllUsers = (req, res) => {
-    User.find({})
-        .exec()
-        .then(users => {
-            res.render("users", {users: users})
-        })
-        .catch((error) => {
-            console.log(error);
-            return [];
-        })
-        .then(() => {
-            console.log("promise complete");
-        })
-};
+exports.postedSignUpForm = (req, res) => {
+    res.render("index")
+}
 
-// function provides sign up page for users
-exports.getUserPage = (req, res) => {
-    res.render("sign-up");
-};
+exports.postedLogInForm = (req, res) => {
+    res.render("index")
+}
 
 // retrives the posted data from the req body and saves a new user
 exports.saveUser = (req, res) => {
@@ -30,7 +17,7 @@ exports.saveUser = (req, res) => {
     })
     newUser.save()
         .then(() => {
-            res.render("thanks");
+            res.render("thanks"); // make a modal to let them know they're signed up?
         })
         .catch(error => {
             res.send(error);

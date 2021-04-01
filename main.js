@@ -19,12 +19,16 @@ app.use(express.urlencoded({extended: false}));
 
 app.use(express.json());
 
-app.post("/signUp", homeController.postedSignUpForm);
-app.post("/logIn", homeController.postedLogInForm);
+app.post("/signUp", usersController.postedSignUpForm);
+app.post("/logIn", usersController.postedLogInForm);
 
 app.get("/search", homeController.showResults);
 app.get("/settings", homeController.showSettings);
 app.get("/account", homeController.showAccount);
+
+// error handling
+app.use(errorController.pageNotFoundError);
+app.use(errorController.internalServerError);
 
 
 app.listen(app.get("port"), () => {
