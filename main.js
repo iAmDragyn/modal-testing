@@ -22,9 +22,9 @@ app.use(express.json());
 app.post("/signUp", homeController.postedSignUpForm);
 app.post("/logIn", homeController.postedLogInForm);
 
-// app.get("/search", homeController.showResults);
-// app.get("/settings", homeController.showSettings);
-// app.get("/account", homeController.showAccount);
+app.get("/search", homeController.showResults);
+app.get("/settings", homeController.showSettings);
+app.get("/account", homeController.showAccount);
 
 
 app.listen(app.get("port"), () => {
