@@ -11,9 +11,18 @@ exports.postedLogInForm = (req, res) => {
 // retrives the posted data from the req body and saves a new user
 exports.saveUser = (req, res) => {
     let newUser = new User({
-        name: req.body.name,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        dateOfBirth: req.body.dateOfBirth,
+        username: req.body.username,
         email: req.body.email,
-        zipCode: req.body.zipCode
+        password: req.body.password,
+        securityQuestion1: req.body.securityQuestion1,
+        securityAnswer1: req.body.securityAnswer1,
+        securityQuestion2: req.body.securityQuestion2,
+        securityAnswer2: req.body.securityAnswer2,
+        securityQuestion3: req.body.securityQuestion3,
+        securityAnswer3: req.body.securityAnswer3
     })
     newUser.save()
         .then(() => {
