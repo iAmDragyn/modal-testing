@@ -26,7 +26,7 @@ exports.saveUser = (req, res) => {
     })
     newUser.save()
         .then(() => {
-            res.render("thanks"); // make a modal to let them know they're signed up?
+            res.render("index"); // make a modal to let them know they're signed up?
         })
         .catch(error => {
             res.send(error);
