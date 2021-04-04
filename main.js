@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.post("/", usersController.saveUser);
-app.post("/home", usersController.postedLogInForm);
+app.post("/home", usersController.logIn);
 
 app.get("/search", homeController.showResults);
 app.get("/settings", homeController.showSettings);
