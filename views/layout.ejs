@@ -1,3 +1,9 @@
+<!-- 
+Some Code Sourced: 
+https://stackoverflow.com/questions/49943610/can-i-check-password-confirmation-in-bootstrap-4-with-default-validation-options 
+https://getbootstrap.com/docs/5.0/forms/validation/
+--> 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -163,7 +169,7 @@
                 <div class="modal-body text-center">
 
                     <!-- Log in form -->
-                    <form action="/signUp" method="post" class="needs-validation" novalidate>
+                    <form action="/signUp" method="post" class="needs-validation" oninput='confirmPassword.setCustomValidity(confirmPassword.value != password.value ? "Passwords do not match." : "")' novalidate>
 
                         <!-- Form Styling -->
                         <img src="img/happy-emoji-svgrepo-com.svg" width="100" height="100"
@@ -218,7 +224,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <input type="password" id="password-confirm" class="form-control"
+                                <input type="password" name="confirmPassword" id="password-confirm" class="form-control"
                                     placeholder="Confirm password" required>
                                 <div class="invalid-feedback small-text">
                                     Please confirm you password.
@@ -230,7 +236,7 @@
                         Security Questions <br>
                         <fieldset class="borderless">
                             <div class="security-question-dropdown" id="security1">
-                                <select class="form-control" name="securityQuestion1" onchange="updateSecurityQuestion1View()" required>
+                                <select class="form-control" name="securityQuestion1" required>
                                     <option selected disabled value=""> Question 1 </option>
                                     <option value="1">What was your childhood nickname?</option>
                                     <option value="2">What is your oldest cousin's first and last name?</option>
@@ -249,7 +255,7 @@
 
                         <fieldset class="borderless">
                             <div class="security-question-dropdown" id="security2">
-                                <select class="form-control" name="securityQuestion2" onchange="updateSecurityQuestion2View()" required>
+                                <select class="form-control" name="securityQuestion2" required>
                                     <option selected disabled value=""> Question 2 </option>
                                     <option value="1">What was your childhood nickname?</option>
                                     <option value="2">What is your oldest cousin's first and last name?</option>
@@ -268,7 +274,7 @@
 
                         <fieldset class="borderless">
                             <div class="security-question-dropdown" id="security3">
-                                <select class="form-control" name="securityQuestion3" onchange="updateSecurityQuestion3View()" required>
+                                <select class="form-control" name="securityQuestion3" required>
                                     <option selected disabled value=""> Question 3 </option>
                                     <option value="1">What was your childhood nickname?</option>
                                     <option value="2">What is your oldest cousin's first and last name?</option>
@@ -315,6 +321,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+        <script></script>
 
         <!-- bootstrap validation script -->
         <script>

@@ -65,9 +65,18 @@ var commands = [];
 contacts.forEach(c => {
     commands.push(
         User.create({
-            name: c.name,
+            firstName: c.firstName,
+            lastName: c.lastName,
+            dateOfBirth: c.dateOfBirth,
+            username: c.username,
             email: c.email,
-            zipCode: c.zipCode
+            password: c.password,
+            securityQuestion1: c.securityQuestion1,
+            securityAnswer1: c.securityAnswer1,
+            securityQuestion2: c.securityQuestion2,
+            securityAnswer2: c.securityAnswer2,
+            securityQuestion3: c.securityQuestion3,
+            securityAnswer3: c.securityAnswer3
         })
     );
 });
