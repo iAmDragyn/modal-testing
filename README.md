@@ -18,7 +18,7 @@
 <br>
 **Justification in design choices:** We decided to use ejs layouts rather than Vue.js for the visual layout, because that is what we have gotten practice with in the latest classworks. With this said, we ran into some issues with linking our .ejs views to our pre-exisitng external script file that held all the validation checks and other functions from the previous classwork. We knew that we needed to adhere to the standard of separating script from other code; however, in the interest of time and completeness, we included our scripts inline with the ejs code. At the bottom of this report are some sources we looked to for troubleshooting this issue, and we will continue trying to make it work after this assignment's due date. We will also be reaching out to the professor and TA as necessary if we are unable to figure out modularizing the program. <br>
 <br>
-**Extra features:** We continued working with modals for sign up and sign in, which proved to be more challenging yet again with sending new user data to the database as well as logging users in. Our views also differed from the base requirements because we are using modals rather than separate views/routes which would have previously been standalone html pages.  <br>
+**Extra features:** We continued working with modals for sign up and sign in, which proved to be more challenging yet again with sending new user data to the database as well as logging users in. Our views also differed from the base requirements because we are using modals rather than separate views/routes which would have previously been standalone html pages. We are happy to report that the modals submission is working fricitonlessly for creating new users! <br>
 <br>
 **Nu HTML Checker status:** For the current build, there were no  .html files to put through the checker. However, our .ejs view files that contain html view formatting, did pass the checker with warnings about not having a doctype tag, head, or title, all of which an ejs file does not need. So we are good there! <br>
 One nuance is that we do not yet have a working search function for searching posts, so we have a placeholder submit button when searching that leads to a dummy search results page (this is purely visual right now to show dynamicity). So, we do get this error with layout.ejs: <br>
@@ -31,7 +31,7 @@ https://community.thenetninja.co.uk/t/help-linking-a-script-js-to-a-ejs-html-fil
 https://stackoverflow.com/questions/47001537/how-to-include-external-js-file-to-ejs-node-template-page <br>
 https://stackoverflow.com/questions/55322763/how-to-use-external-javascript-file-into-an-ejs-file <br>
 <br>
-**Instructions for running program:** Please download the code, run `npm install`, then seed the database, then run `npm start`. <br>
+**Instructions for running program:** Please download the code, run `npm install`, then seed the database by running `node seed.js`, then run `npm start`. <br>
 <br>
 No link for this one, because GitHub pages can only host static HTML pages, like the ones in prior assignments. No server side technology is supported, so Node.js applications won't run on GitHub pages. <br>
 <br>
