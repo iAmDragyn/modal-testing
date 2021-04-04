@@ -5,7 +5,7 @@ exports.postedSignUpForm = (req, res) => {
 }
 
 exports.postedLogInForm = (req, res) => {
-    res.render("index")
+    res.render("home")
 }
 
 // retrives the posted data from the req body and saves a new user
