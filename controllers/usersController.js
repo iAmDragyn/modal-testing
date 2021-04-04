@@ -5,7 +5,15 @@ exports.postedSignUpForm = (req, res) => {
 }
 
 exports.postedLogInForm = (req, res) => {
-    res.render("home")
+    User.findOne({ email: req.body.email }).select('email password').exec(function(user) {
+        if(user){
+            res.render("home");
+        }
+        else{
+            res.render("error");
+        }
+    })
+    
 }
 
 // retrives the posted data from the req body and saves a new user

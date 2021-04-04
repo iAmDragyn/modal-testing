@@ -20,8 +20,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
-app.post("/signUp", usersController.saveUser);
-app.post("/logIn", usersController.postedLogInForm);
+app.post("/", usersController.saveUser);
+app.post("/home", usersController.postedLogInForm);
 
 app.get("/search", homeController.showResults);
 app.get("/settings", homeController.showSettings);
