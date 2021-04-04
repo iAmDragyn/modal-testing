@@ -4,7 +4,8 @@ const express = require("express"), app = express(),
     usersController = require("./controllers/usersController"),
     layouts = require("express-ejs-layouts"), mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/lets_take_a_selfie",
+mongoose.connect(
+    "mongodb://localhost:27017/lets_take_a_selfie",
     { useNewUrlParser: true });
 
 app.set("port", process.env.PORT || 3000);
