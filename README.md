@@ -24,6 +24,11 @@ One nuance is that we do not yet have a working search function for searching po
 Another notable warning is the embedded javascript using special characters that html checker did not approve of, but they are necessary for displaying the page: <br>
 `<%- body %>`
 
+**Sources:** <br>
+https://community.thenetninja.co.uk/t/help-linking-a-script-js-to-a-ejs-html-file/715 <br>
+https://stackoverflow.com/questions/47001537/how-to-include-external-js-file-to-ejs-node-template-page <br>
+https://stackoverflow.com/questions/55322763/how-to-use-external-javascript-file-into-an-ejs-file <br>
+
 
 <br>
 No link for this one, because GitHub pages can only host static HTML pages, like the ones in prior assignments. No server side technology is supported, so Node.js applications won't run on GitHub pages. <br>
