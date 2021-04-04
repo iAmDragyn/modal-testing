@@ -8,13 +8,15 @@
 <br>
 **Date:** 3/18/21 <br>
 <br>
+**NOTE:** Dr. Jafarian kindly gave us an extension for this project until 4/3/21 at 11:59pm. <br>
+<br>
 **Assignment:** 3 for Online Social Network <br>
 <br>
-**Learning objectives:** Our goal was to add to the progress made in the previous classwork by adding the backend mongo database, allowing for creation of new users by signing up, as well as allowing existing users to sign in. ADD MORE? <br>
+**Learning objectives:** Our goal was to add to the progress made in the previous classwork by adding the backend mongo database, allowing for creation of new users by signing up, as well as allowing existing users to sign in. <br>
 <br>
 **Technologies used:** HTML5, CSS3, Native Javascript, Vue.js for code, Visual Studio Code for development and testing, Google Chrome browser for testing, Windows 10 OS <br>
 <br>
-**Justification in design choices:** We decided to use ejs layouts rather than Vue.js for the visual layout, because that is what we have gotten practice with in the latest classworks. ADD MORE <br>
+**Justification in design choices:** We decided to use ejs layouts rather than Vue.js for the visual layout, because that is what we have gotten practice with in the latest classworks. With this said, we ran into some issues with linking our .ejs views to our pre-exisitng external script file that held all the validation checks and other functions from the previous classwork. We knew that we needed to adhere to the standard of separating script from other code; however, in the interest of time and completeness, we included our scripts inline with the ejs code. At the bottom of this report are some sources we looked to for troubleshooting this issue, and we will continue trying to make it work after this assignment's due date. We will also be reaching out to the professor and TA as necessary if we are unable to figure out modularizing the program. <br>
 <br>
 **Extra features:** We continued working with modals for sign up and sign in, which proved to be more challenging yet again with sending new user data to the database as well as logging users in. Our views also differed from the base requirements because we are using modals rather than separate views/routes which would have previously been standalone html pages.  <br>
 <br>
