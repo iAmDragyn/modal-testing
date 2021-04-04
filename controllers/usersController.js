@@ -6,8 +6,7 @@ exports.postedSignUpForm = (req, res) => {
 
 exports.logIn = (req, res) => {
     // res.render("home");
-    
-    User.findOne({ email: req.body.email }).select("email password").exec(function(err, user) {
+    User.findOne({ email: req.body.email }).select('email password').exec(function(err, user) {
         if(user){
             res.render("home");
         }
